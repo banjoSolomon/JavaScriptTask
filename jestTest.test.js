@@ -1,4 +1,4 @@
-let {testScore, increaseScore, squareOfEach, studentPlaning, bookClub} = require("./Task1.js")
+let {testScore, increaseScore, squareOfEach, studentPlaning, bookClub, mostNumberAppered} = require("./Task1.js")
 
 test("Filter filter student score", ()=>{
     let arr = [95, 78, 85, 60, 45, 92, 56, 19, 40];
@@ -42,6 +42,15 @@ test("Student planing", ()=>{
     expect(answer).toEqual(["1:00 PM", "3:00 PM", "5:00 PM"])
 
 }) 
+
+
+test("Most NumberOccured", ()=>{
+    let arr = [3,3,1,1,1 ];
+    let answer =  mostNumberAppered(arr);
+    expect(answer).toEqual(1)
+
+}) 
+
 
 
 

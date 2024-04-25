@@ -22,6 +22,27 @@ function studentPlaning(classTiming){
 
 }
 
+function mostNumberAppered(numbers){
+    let maxCount = 0;
+    let mostOccoured = 0;
+    for (let count = 0; count < numbers.length; count++) {
+        let currentCount = 0;
+        for (let index = 0; index < numbers.length; index++) {
+            if (numbers[count] == numbers[index]) {
+                currentCount++;
+            }
+
+        }
+        if (currentCount > maxCount) {
+            maxCount = currentCount;
+            mostOccoured = numbers[count];
+        }
+    }
+    return mostOccoured;
+}
+
+
+
 
 
 
@@ -36,4 +57,4 @@ function bookClub(members, books){
 
 console.log(bookClub(["oliver"], ["books"]))
 
-module.exports = {testScore, increaseScore, squareOfEach, bookClub, studentPlaning};
+module.exports = {testScore, increaseScore, squareOfEach, bookClub, studentPlaning,  mostNumberAppered};
