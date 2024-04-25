@@ -18,9 +18,37 @@ console.log(goat)
 let vehicle = {wheels : 4};
 let car = {
     seats: 5,
-    _proto_: vehicle,
+    __proto__: vehicle,
     wheels: 6,
 }
-console.log('vehicle:', vehicle, vehicle._proto_);
-console.log('car:', car, car._proto_);
-console.log('car wheels:', car.wheels);
+//console.log('vehicle:', vehicle, vehicle.__proto__);
+console.log('car:', car, car.__proto__);
+//console.log('car wheels:', car.wheels);
+
+
+function  Person(name, age){
+    this.name = name;
+    this.age = age;
+
+    this.sayName = function(){
+        console.log(this.name);
+
+    }
+}
+
+function Person1(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.sayName = function(){
+        console.log(this.name);
+
+    }
+    
+
+}
+const Person2 = new Person1("John", 11)
+const PersonOne = new Person("Solomon", 13)
+console.log(PersonOne.name)
+console.log(PersonOne.age)
+console.log(Person2.name)
