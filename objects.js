@@ -52,3 +52,11 @@ const PersonOne = new Person("Solomon", 13)
 console.log(PersonOne.name)
 console.log(PersonOne.age)
 console.log(Person2.name)
+
+
+const jason = '{"result": true , "count" : 42}';
+const obj = JSON.parse(jason);
+console.log(obj.count)
+console.log(obj.result)
+
+console.log(JSON.stringify({x: 5, y: 6}));
